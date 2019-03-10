@@ -1,9 +1,10 @@
-class Movie {
-  Movie({
+class Product {
+  Product({
     this.bannerUrl,
     this.posterUrl,
     this.title,
     this.rating,
+    this.price,
     this.starRating,
     this.categories,
     this.storyline,
@@ -15,6 +16,7 @@ class Movie {
   final String posterUrl;
   final String title;
   final double rating;
+  final int price;
   final int starRating;
   final List<String> categories;
   final String storyline;

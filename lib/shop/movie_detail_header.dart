@@ -5,11 +5,11 @@ import 'package:bbm/shop/poster.dart';
 import 'package:bbm/shop/rating_information.dart';
 
 class MovieDetailHeader extends StatelessWidget {
-  MovieDetailHeader(this.movie);
-  final Movie movie;
+  MovieDetailHeader(this.product);
+  final Product product;
 
   List<Widget> _buildCategoryChips(TextTheme textTheme) {
-    return movie.categories.map((category) {
+    return product.categories.map((category) {
       return Padding(
         padding: const EdgeInsets.only(right: 8.0),
         child: Chip(
@@ -29,11 +29,12 @@ class MovieDetailHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          movie.title,
+          product.title,
           style: textTheme.title,
         ),
+
         SizedBox(height: 8.0),
-        RatingInformation(movie),
+        RatingInformation(product),
         SizedBox(height: 12.0),
         Row(children: _buildCategoryChips(textTheme)),
       ],
@@ -42,8 +43,8 @@ class MovieDetailHeader extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 140.0),
-          child: ArcBannerImage(movie.bannerUrl),
+          padding: const EdgeInsets.only(bottom: 180.0),
+          child: ArcBannerImage(product.bannerUrl),
         ),
         Positioned(
           bottom: 0.0,
@@ -54,7 +55,7 @@ class MovieDetailHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Poster(
-                movie.posterUrl,
+                product.posterUrl,
                 height: 180.0,
               ),
               SizedBox(width: 16.0),

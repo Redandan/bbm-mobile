@@ -11,10 +11,10 @@ class PhotoScroller extends StatelessWidget {
       padding: const EdgeInsets.only(right: 16.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(4.0),
-        child: Image.asset(
+        child: Image.network(
           photo,
-          width: 160.0,
-          height: 120.0,
+//          width: 160.0,
+//          height: 120.0,
           fit: BoxFit.cover,
         ),
       ),
@@ -30,10 +30,10 @@ class PhotoScroller extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Text(
-            'Photos',
-            style: textTheme.subhead.copyWith(fontSize: 18.0),
-          ),
+//          child: Text(
+//            '',
+//            style: textTheme.subhead.copyWith(fontSize: 18.0),
+//          ),
         ),
         SizedBox.fromSize(
           size: const Size.fromHeight(100.0),

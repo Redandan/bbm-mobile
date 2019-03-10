@@ -12,10 +12,10 @@ class Storyline extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Story line',
-          style: textTheme.subhead.copyWith(fontSize: 18.0),
-        ),
+//        Text(
+//          '',
+//          style: textTheme.subhead.copyWith(fontSize: 18.0),
+//        ),
         SizedBox(height: 8.0),
         Text(
           storyline,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+import 'shop/shop_home.dart';
 class Example07 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,19 +14,19 @@ class Example07 extends StatelessWidget {
         crossAxisSpacing: 0.0,
         children: <Widget>[
           new _Tile(
-              'https://cdn.pixabay.com/photo/2013/04/07/21/30/croissant-101636_960_720.jpg',
+              'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/D_30%E5%85%AC%E5%88%86%E4%B8%BB%E5%9C%96.jpg',
               1),
           new _Tile(
-              'https://cdn.pixabay.com/photo/2016/01/22/16/42/eiffel-tower-1156146_960_720.jpg',
+              'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/%E5%9B%BA%E6%9C%AC%E5%9F%B9%E5%8A%9B(%E7%AC%AC%E4%B8%80%E7%89%88)/%E5%9B%BA%E6%9C%AC%E5%9F%B9%E5%8A%9B%E4%B8%BB%E5%9C%96.jpg',
               2),
           new _Tile(
-              'https://cdn.pixabay.com/photo/2016/10/22/20/34/two-types-of-wine-1761613_960_720.jpg',
+              'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/%E7%9B%8A%E7%94%9F%E8%8F%8C%E7%AC%AC2%E7%89%88-20190211/%E3%80%90%E7%AC%AC2%E7%89%88%E3%80%91%E9%80%99%E5%B0%B1%E6%98%AF%E9%82%84%E6%B4%BB%E8%91%97%E7%9A%84%E7%9B%8A%E7%94%9F%E8%8F%8C160%E5%84%84.jpg',
               3),
           new _Tile(
-              'https://cdn.pixabay.com/photo/2016/10/21/14/50/plouzane-1758197_960_720.jpg',
+              'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/%E6%A2%85%E7%B2%BE%E6%96%B0%E7%89%880103/%E6%A2%85%E7%B2%BE%E9%8A%B7%E5%94%AE%E6%A5%AD_04.jpg',
               4),
           new _Tile(
-              'https://cdn.pixabay.com/photo/2016/11/16/10/59/mountains-1828596_960_720.jpg',
+              'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/%E8%91%A1%E8%90%84%E7%B1%BD0103_(%E7%AC%AC%E4%BA%8C%E7%89%88)/OPC%E9%8A%B7%E5%94%AE%E6%A5%AD_01.jpg',
               5),
           new _Tile(
               'https://cdn.pixabay.com/photo/2013/04/13/18/42/the-eiffel-tower-103417_960_720.jpg',
@@ -60,9 +61,13 @@ class _Tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Card(
-      child: new Column(
-        children: <Widget>[
+    GestureDetector content = GestureDetector(
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ShopHome()));
+        },
+        child: Column(children: <Widget>[
+
           new Image.network(source),
           new Padding(
             padding: const EdgeInsets.all(4.0),
@@ -79,7 +84,11 @@ class _Tile extends StatelessWidget {
               ],
             ),
           )
-        ],
+        ]));
+
+    return new Card(
+      child: new Column(
+        children: <Widget>[content],
       ),
     );
   }

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:bbm/shop/models.dart';
 
 class RatingInformation extends StatelessWidget {
-  RatingInformation(this.movie);
-  final Movie movie;
+  RatingInformation(this.product);
+  final Product product;
 
   Widget _buildRatingBar(ThemeData theme) {
     var stars = <Widget>[];
 
     for (var i = 1; i <= 5; i++) {
-      var color = i <= movie.starRating ? theme.accentColor : Colors.black12;
+      var color = i <= product.starRating ? theme.accentColor : Colors.black12;
       var star = Icon(
         Icons.star,
         color: color,
@@ -32,7 +32,7 @@ class RatingInformation extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          movie.rating.toString(),
+          product.rating.toString(),
           style: textTheme.title.copyWith(
             fontWeight: FontWeight.w400,
             color: theme.accentColor,

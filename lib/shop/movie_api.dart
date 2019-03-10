@@ -1,29 +1,35 @@
 import 'package:bbm/shop/models.dart';
 
-final Movie testMovie = Movie(
-  bannerUrl: 'https://cf.shopee.tw/file/471745b0192fbc61df0a41c57a4c1d12',
-  posterUrl: 'images/poster.png',
-  title: 'Levis 質感黑立領夾克 女裝 34723-0000',
-  rating: 8.0,
+final Product testMovie = Product(
+  bannerUrl: 'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/banner/%E8%BC%AA%E6%92%AD%E5%9C%96_30cm-.jpg',
+  posterUrl: 'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/D_30%E5%85%AC%E5%88%86%E4%B8%BB%E5%9C%96.jpg',
+  title: '30公分好棒棒就是要你棒棒的  男性頂級滋補選擇',
+  rating: 8,
+  price: 1150,
   starRating: 4,
-  categories: ['夾克', '棒球外套'],
-  storyline: '02/12 12:00 - 03/31 23:59 滿\$4,500憑折扣碼【LEVI02500】再折500元。'
-      '材質:100% 聚酯纖維'
-      '收縮袖口剪裁俐落美觀'
-      '針織立領，穿著更舒適'
-      '拉鍊設計，時尚又方便'
-      '全館免運 / 現貨免等 / Levi\'s 百貨專櫃皆可免費修改褲長。'
-  '全館商品於鑑賞期內可免費退貨，退貨時必須回復至您收到商品時的原始狀態，包含主商品、配件、包裝吊牌完整、活動贈品及出貨單等。',
+  categories: ['健康食品', '男性'],
+  storyline: '02/12 12:00 - 03/31 23:59 滿\$4,500憑折扣碼【LEVI02500】再折500元。\n'
+      '超越自己的潛能\n'
+      '✔滋補強身\n'
+      '✔增強體力\n'
+      '✔精神旺盛\n'
+      ' 全新改版 增量30顆 效果再升級 \n',
   photoUrls: [
-    'images/1.png',
-    'images/2.png',
-    'images/3.png',
-    'images/4.png',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_01.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_02.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_03.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_04.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_05.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_06.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_07.jpg',
+    'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E4%B8%89%E7%89%88/30%E5%85%AC%E5%88%86%E5%A5%BD%E6%A3%92%E6%A3%92_%E6%9C%80%E6%96%B0%E7%89%88_08.jpg',
+
+
   ],
   actors: [
     Actor(
       name: 'Louis C.K.',
-      avatarUrl: 'images/louis.png',
+      avatarUrl: 'https://s3-ap-southeast-1.amazonaws.com/redan-temp-img/prodImg/levis/_levis09.jpg',
     ),
     Actor(
       name: 'Eric Stonestreet',

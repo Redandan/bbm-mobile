@@ -6,8 +6,8 @@ import 'package:bbm/shop/photo_scroller.dart';
 import 'package:bbm/shop/story_line.dart';
 
 class MovieDetailsPage extends StatelessWidget {
-  MovieDetailsPage(this.movie);
-  final Movie movie;
+  MovieDetailsPage(this.product);
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +15,14 @@ class MovieDetailsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            MovieDetailHeader(movie),
+            MovieDetailHeader(product),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Storyline(movie.storyline),
+              child: Storyline(product.storyline),
             ),
-            PhotoScroller(movie.photoUrls),
+            PhotoScroller(product.photoUrls),
             SizedBox(height: 20.0),
-            ActorScroller(movie.actors),
+            ActorScroller(product.actors),
             SizedBox(height: 50.0),
           ],
         ),
